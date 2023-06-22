@@ -10,7 +10,7 @@ const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
 const corsOptions = {
-    origin: '*', // Replace with your frontend's origin
+    origin: 'https://ft-voosh-kgm3mn5h1-smitchaute.vercel.app/api/add-user', // Replace with your frontend's origin
     allowedHeaders: ['Content-Type', 'Authorization'], // Add any additional headers you need
 };
 
