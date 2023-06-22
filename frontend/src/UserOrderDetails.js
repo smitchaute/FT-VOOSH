@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./userOrderDetails.css"
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://ft-voosh-xl9m.vercel.app/';
 
 
 function OrderDetailsPage() {
@@ -13,6 +13,7 @@ function OrderDetailsPage() {
         const fetchOrderDetails = async () => {
             try {
                 let user = localStorage.getItem("user")
+                console.log("user", typeof user)
                 let userId = JSON.parse(user)
                 const response = await fetch(`${API_BASE_URL}/get-order?userId=${userId}`);
                 const data = await response.json();

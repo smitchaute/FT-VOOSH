@@ -4,7 +4,7 @@ import axios from 'axios';
 import "./loginStyle.css"
 import google from "./google.png"
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://ft-voosh-xl9m.vercel.app';
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -22,10 +22,11 @@ function LoginPage() {
             console.log("re", response.data);
             localStorage.setItem("token", response.data.token)
             localStorage.setItem("user", JSON.stringify(response.data.data._id))
+            navigate("/user-form")
         } catch (error) {
             console.error(error);
+            alert("user not found")
         }
-        navigate("/user-form")
     };
 
     const handleSignup = () => {

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import "./user-add.css"
 
@@ -10,11 +10,21 @@ function UserFormPage() {
     const [subTotal, setSubTotal] = useState('');
     const [orderPhoneNumber, setOrderPhoneNumber] = useState('');
 
+    const [userId, user] = useSearchParams()
+    console.log('user', userId.get("userId"))
+
     const handleAddUser = async (e) => {
         e.preventDefault();
         try {
             const token = localStorage.getItem("token"); // Get token from login response or local storage
-            const user = JSON.parse(localStorage.getItem("user"))
+            let user = JSON.parse(localStorage.getItem("user"))
+            if (!user) {
+                console.log("user", user)
+                if (userId.get("google")) {
+                    user = userId.get("userId")
+                    localStorage.setItem("user", JSON.stringify(user))
+                }
+            }
             const response = await axios.post(
                 `${API_BASE_URL}/add-order`,
                 {
@@ -24,13 +34,12 @@ function UserFormPage() {
                 },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
+            navigate("/api/get-order")
             console.log(response.data.message);
         } catch (error) {
             console.error(error);
         }
-        navigate("/api/get-order")
     };
-
     return (
         <div className='login-container'>
             <div className='login-page'>
