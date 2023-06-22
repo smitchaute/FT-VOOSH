@@ -8,10 +8,13 @@ const passport = require('passport');
 require('./config/passport');
 const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
-const accessController = require("./accessControl").accessController;
-
-app.use(cors())
-app.use(accessController);
+// const accessController = require("./accessControl").accessController;
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+}
+app.use(cors(corsOptions))
+// app.use(accessController);
 app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/api', orderRoutes);
