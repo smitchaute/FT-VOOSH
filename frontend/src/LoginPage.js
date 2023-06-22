@@ -4,7 +4,7 @@ import axios from 'axios';
 import "./loginStyle.css"
 import google from "./google.png"
 
-const API_BASE_URL = 'https://roaring-sopapillas-bb74eb.netlify.app/api';
+const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app/api';
 
 function LoginPage() {
     const navigate = useNavigate();
