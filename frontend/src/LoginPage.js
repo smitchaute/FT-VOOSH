@@ -4,7 +4,7 @@ import axios from 'axios';
 import "./loginStyle.css"
 import google from "./google.png"
 
-const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app';
+const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app/api';
 
 function LoginPage() {
     const navigate = useNavigate();

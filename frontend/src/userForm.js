@@ -3,7 +3,7 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import "./user-add.css"
 
-const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app';
+const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app/api';
 
 function UserFormPage() {
     const navigate = useNavigate();
