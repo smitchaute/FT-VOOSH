@@ -9,11 +9,12 @@ require('./config/passport');
 const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
-// const corsOptions = {
-//     origin: 'https://ft-voosh-kgm3mn5h1-smitchaute.vercel.app',
-//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
-// }
-app.use(cors())
+const corsOptions = {
+    origin: '*', // Replace with your frontend's origin
+    allowedHeaders: ['Content-Type', 'Authorization'], // Add any additional headers you need
+};
+
+app.use(cors(corsOptions));
 // app.use(accessController);
 app.use(express.json());
 app.use('/api', authRoutes);
