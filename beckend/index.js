@@ -11,7 +11,7 @@ const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
 app.use(
     cors({
-        origin: 'https://ft-voosh-kgm3mn5h1-smitchaute.vercel.app/api/add-user', // Replace with your frontend's origin
+        origin: '*', // Replace with your frontend's origin
         credentials: true, // Enable credentials support
     })
 );
