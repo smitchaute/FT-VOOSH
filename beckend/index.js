@@ -1,19 +1,14 @@
 require('dotenv').config();
 const cookieSession = require("cookie-session");
 const express = require('express');
-const cors = require('cors');
 const app = express();
 const connectDB = require('./db');
 const passport = require('passport');
 require('./config/passport');
 const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
-// const accessController = require("./accessControl").accessController;
-app.use(cors({
-    origin: "*",
-    "Access-Control-Allow-Origin": "*"
-}));
-// app.use(accessController);
+const accessController = require("./accessControl").accessController;
+app.use(accessController);
 app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/api', orderRoutes);
