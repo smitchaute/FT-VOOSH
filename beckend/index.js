@@ -10,7 +10,7 @@ const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
 const corsOptions = {
-    origin: 'ft-voosh-xl9m-git-main-smitchaute.vercel.app',
+    origin: 'ft-voosh-xl9m.vercel.app',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 app.use(cors(corsOptions))
