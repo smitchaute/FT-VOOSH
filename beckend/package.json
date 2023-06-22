@@ -1,20 +1,9 @@
 {
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "nodemon index.js"
   },
-  "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/app.js"
-    }
-  ],
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-session": "^2.0.0",
