@@ -1,8 +1,7 @@
 {
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "nodemon index.js",
-    "build": "nodemon run build"
+    "dev": "nodemon index.js"
   },
   "builds": [
     {
