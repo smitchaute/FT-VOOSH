@@ -9,8 +9,8 @@ require('./config/passport');
 const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
-var corsOptions = {
-    origin: '*',
+const corsOptions = {
+    origin: 'ft-voosh-xl9m-git-main-smitchaute.vercel.app',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 app.use(cors(corsOptions))
