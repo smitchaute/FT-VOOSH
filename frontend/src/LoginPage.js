@@ -60,6 +60,7 @@ function LoginPage() {
                 <div className='button-group'><button className='login-btn' onClick={handleLogin}>Login</button>
                     <button className='signup-btn' onClick={handleSignup}>Signup</button>
                 </div>
+                {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 <button className="google-btn" onClick={handleGoogle}><img src={google}></img></button>
             </div>
         </div>

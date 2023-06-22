@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import "./user-add.css"
@@ -10,6 +12,7 @@ function UserFormPage() {
     const [subTotal, setSubTotal] = useState('');
     const [orderPhoneNumber, setOrderPhoneNumber] = useState('');
 
+    // eslint-disable-next-line no-unused-vars
     const [userId, user] = useSearchParams()
     console.log('user', userId.get("userId"))
 
