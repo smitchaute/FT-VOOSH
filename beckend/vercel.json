@@ -14,7 +14,8 @@
     ],
     "headers": [
         {
-            "src": "./index.js",
+            "src": "/(.*)",
+            "dest": "./index.js",
             "headers": [
                 {
                     "key": "Access-Control-Allow-Credentials",
