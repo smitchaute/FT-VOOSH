@@ -35,7 +35,7 @@ function LoginPage() {
     };
     const handleGoogle = () => {
         // 👇️ navigate to /
-        window.open("https://ft-voosh.vercel.app/api/auth/google", "_self");
+        window.open("http://localhost:3000/api/auth/google", "_self");
         navigate("/")
     };
     return (
