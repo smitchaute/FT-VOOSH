@@ -10,7 +10,8 @@ const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
 app.use(cors({
-    origin: ['https://ft-voosh-xl9m-git-main-smitchaute.vercel.app', 'https://ft-voosh-kgm3mn5h1-smitchaute.vercel.app']
+    origin: "*",
+    "Access-Control-Allow-Origin": "*"
 }));
 // app.use(accessController);
 app.use(express.json());
