@@ -6,7 +6,7 @@ accessController = (req, res, next) => {
     );
     res.setHeader(
         "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials"
+        "Origin, X-Requested-With, Content-Type"
     );
     res.setHeader("Access-Control-Allow-Credentials", true);
     next();
