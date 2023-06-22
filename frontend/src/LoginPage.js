@@ -35,7 +35,7 @@ function LoginPage() {
     };
     const handleGoogle = () => {
         // 👇️ navigate to /
-        window.open("https://ft-voosh-xl9m.vercel.app/api/auth/google", "_self");
+        window.open("https://ft-voosh-kgm3mn5h1-smitchaute.vercel.app/api/auth/google", "_self");
         navigate("/")
     };
     return (
