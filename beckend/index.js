@@ -9,12 +9,8 @@ require('./config/passport');
 const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 // const accessController = require("./accessControl").accessController;
-app.use(
-    cors({
-        origin: 'https://ft-voosh-kgm3mn5h1-smitchaute.vercel.app', // Replace with your frontend's origin
-        credentials: true, // Enable credentials support
-    })
-);
+app.use(cors({ origin: 'https://ft-voosh-xl9m.vercel.app' }));
+
 // app.use(accessController);
 app.use(express.json());
 app.use('/api', authRoutes);
