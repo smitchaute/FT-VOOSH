@@ -37,6 +37,8 @@ function UserFormPage() {
                 },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
+            console.log("res", response)
+            alert(response.data.message)
             navigate("/api/get-order")
             console.log(response.data.message);
         } catch (error) {
