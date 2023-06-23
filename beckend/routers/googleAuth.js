@@ -9,7 +9,7 @@ router.get(
     passport.authenticate('google', { failureRedirect: '/login' }),
     (req, res) => {
         // Redirect or return token
-        res.redirect(`https://ft-voosh-xl9m.vercel.app/user-form?userId=${req.user?._id}&google=true`);
+        res.redirect(`https://ft-voosh-jfpw.vercel.app/user-form?userId=${req.user?._id}&google=true`);
     }
 );
 
