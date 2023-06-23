@@ -1,5 +1,5 @@
 accessController = (req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "https://ft-voosh-jfpw.vercel.app");
     res.setHeader(
         "Access-Control-Allow-Methods",
         "PUT, GET, POST, DELETE, OPTIONS"
