@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./userOrderDetails.css"
 
-const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app/api';
+const API_BASE_URL = 'https://ft-voosh.vercel.app/api';
 
 
 function OrderDetailsPage() {

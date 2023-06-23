@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './signup.css'
 
-const API_BASE_URL = 'https://ft-voosh-464zlbcq6-smitchaute.vercel.app/api';
+const API_BASE_URL = 'https://ft-voosh.vercel.app/api';
 
 function SignupPage() {
     const navigate = useNavigate();
