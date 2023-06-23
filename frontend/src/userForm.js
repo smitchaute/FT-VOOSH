@@ -29,7 +29,7 @@ function UserFormPage() {
                 }
             }
             const response = await axios.post(
-                `https://ft-voosh.vercel.app/api/add-order`,
+                `${API_BASE_URL}/add-order`,
                 {
                     userId: user, // Get user ID from login response or local storage
                     subTotal,
@@ -48,7 +48,7 @@ function UserFormPage() {
     return (
         <div className='login-container'>
             <div className='login-page'>
-                <h2 style={{ color: "white" }}>Add User</h2>
+                <h2 style={{ color: "white" }}>Add Order</h2>
                 <div className='user-input'>
                     <input
                         type="number"
