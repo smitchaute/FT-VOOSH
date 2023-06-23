@@ -1,6 +1,7 @@
 require('dotenv').config();
 const cookieSession = require("cookie-session");
 const express = require('express');
+const cors = require('cors')
 const path = require('path')
 const app = express();
 const connectDB = require('./db');
@@ -9,8 +10,9 @@ require('./config/passport');
 const authRoutes = require('./routers/auth');
 const orderRoutes = require('./routers/orders');
 const accessController = require("./accessControl").accessController;
-app.use(accessController);
-// app.use(cors({ origin: `${process.env.CLIENT_URL}`, methods: "GET,POST,PUT,DELETE", credentials: true, }));
+// app.use(accessController);
+// // app.use(cors({ origin: `${process.env.CLIENT_URL}`, methods: "GET,POST,PUT,DELETE", credentials: true, }));
+app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use('/api', authRoutes);
