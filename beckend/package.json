@@ -1,8 +1,7 @@
 {
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "nodemon index.js",
-    "build": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
